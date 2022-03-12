@@ -1,1 +1,16 @@
-151,11:     ret = adm_rs_getUrls(ADM_RS_URL_REGISTER, NULL, url, 128);
+/home/jjl/桌面/FOTA/UC/3_fota-uc_BUG/framework/requestServer/inc/adm_rs_url.h
+  56,13: extern D32S adm_rs_getUrls(ADM_RS_URL_TYPE urlType, DCHAR *deviceId, DCHAR *url, D32S urlLen);
+
+/home/jjl/桌面/FOTA/UC/3_fota-uc_BUG/framework/requestServer/src/adm_rs_core.c
+  151,11:     ret = adm_rs_getUrls(ADM_RS_URL_REGISTER, NULL, url, 128);
+  227,11:     ret = adm_rs_getUrls(ADM_RS_URL_TASKEND, taskEndBody->deviceId, url, 128);
+  296,11:     ret = adm_rs_getUrls(ADM_RS_URL_CONFIG, configBody->deviceId, url, 128);
+  368,11:     ret = adm_rs_getUrls(ADM_RS_URL_REPORTVEHICLECONFIG, reportvehicleBody->deviceId, url, 128);
+  453,11:     ret = adm_rs_getUrls(ADM_RS_URL_CHECKVERSION, checkBody->deviceId, url, 128);
+  549,11:     ret = adm_rs_getUrls(ADM_RS_URL_REPORTDLSPEED, report->deviceId, url, 128);
+  612,11:     ret = adm_rs_getUrls(ADM_RS_URL_REPORTUPGRADERESULT, report->deviceId, url, 128);
+  676,11:     ret = adm_rs_getUrls(ADM_RS_URL_REPORTLOGFILE, report->deviceId, url, 128);
+  743,11:     ret = adm_rs_getUrls(ADM_RS_URL_REPORTSUBINFO, report->deviceId, url, 128);
+
+/home/jjl/桌面/FOTA/UC/3_fota-uc_BUG/framework/requestServer/src/adm_rs_url.c
+  213,6: D32S adm_rs_getUrls(ADM_RS_URL_TYPE urlType, DCHAR *deviceId, DCHAR *url, D32S urlLen)
